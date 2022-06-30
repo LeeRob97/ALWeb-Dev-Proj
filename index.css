@@ -1,0 +1,25 @@
+h2 {
+    margin: 0;
+}
+
+.entry-label {
+    display: inline-block;
+    min-width: 100px;
+}
+
+.entry-wrapper {
+    font-size: 20px;
+}
+
+.entry-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-area {
+    width: 480px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #000000
+}
