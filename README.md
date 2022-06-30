@@ -10,14 +10,18 @@ The goal of this project is to be able to create a list of users and display a t
 - As you code this project, ensure you push your changes often!
 
 ## Requirements
-- Each user data object should be represented by the `User` class found in `index.js`. Since this class accepts three
-parameters, your table needs to have the three respective columns.
-- In terms of CRUD operations, users can be created or deleted. Do not worry about editing existing data.
+- When the user clicks submit, create a `User` data object found in `index.js`. The username field is required,
+so if not given, alert the user until the value is present.
+- After the user is created, the results will be shown in the section `.existing-users-area`. Since this 
+`User` object accepts three parameters, your table needs to have the three respective columns.
+- In terms of CRUD operations, users can be created or deleted. Do not worry about updating existing data.
 - Since you will not create a database, your list of users will be kept in memory (i.e. array) and should match what is on the screen.
 
 ## Tech Requirements
 - All your javascript needs to be contained in `index.js`, and css in `index.css`.
-- Your do not have to use any specific javascript library or framework
+- You do not have to use any specific javascript library or framework
 - You will be required to explain your code.
+
+Send any questions to: l.robertson@austinlane.com
 
 **GOOD LUCK**
