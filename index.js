@@ -9,5 +9,10 @@ window.addEventListener("load", function () {
 
     document.getElementById("submit").addEventListener("click", function() {
         // Triggered when the user clicks submit
+		if(username == undefined){
+			throw('Value1 is a required field for function foo');
+		}
+		
+		
     });
 })
