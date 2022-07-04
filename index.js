@@ -18,7 +18,7 @@ function readFromData(){
 
 
 function insertNewRecord(data){
-	var table = document.getElementById("accountList").getElementsByTagName('tbody')[0];
+	var table = document.getElementById("userList").getElementsByTagName('tbody')[0];
 	var newRow = table.insertRow(table.length);
 	cell0 = newRow.insertCell(0);
 	cell0.innerHTML = data.ID;
@@ -41,7 +41,7 @@ function reset(){
 function onDelete(td){
 	if(confirm("Are you sure")){
 	row = td.parentElement.parentElement; // 
-	document.getElementById("accountList").deleteRow(row.rowIndex);
+	document.getElementById("userList").deleteRow(row.rowIndex);
 	}
 }
 
