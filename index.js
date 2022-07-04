@@ -5,6 +5,42 @@ function User(username, firstName, lastName) {
     this.lastName = lastName;
 }
 
+function readFromData(){
+	var fromData = {};
+	fromData["ID"] = Math.floor(Math.random() * 100);
+	fromData["uName"] = document.getElementById("userName").value;
+	fromData["fName"] = document.getElementById("firstName").value;
+	fromData["lName"] = document.getElementById("lastName").value;
+	return fromData;	
+}
+
+function insertNewRecord(data){
+	var table = document.getElementById("accountList").getElementsByTagName('tbody')[0];
+	var newRow = table.insertRow(table.length);
+	cell0 = newRow.insertCell(0);
+	cell0.innerHTML = data.ID;
+	cell1 = newRow.insertCell(1);
+	cell1.innerHTML = data.uName;
+	cell2 = newRow.insertCell(2);
+	cell2.innerHTML = data.fName;
+	cell3 = newRow.insertCell(3);
+	cell3.innerHTML = data.lName;
+	cell4 = newRow.insertCell(4);
+	cell4.innerHTML = '<a>Delete</a>';
+}
+
+function reset(){
+	document.getElementById("userName").value = "";
+	document.getElementById("firstName").value = "";
+	document.getElementById("lastName").value = "";
+}
+
+function delete(td){
+	
+}
+
+
+
 window.addEventListener("load", function () {
 
     document.getElementById("submit").addEventListener("click", function() {
@@ -21,7 +57,12 @@ window.addEventListener("load", function () {
 		else{
 			//To take out the error if there was one prior
 			document.getElementById("error").innerHTML = "";
+			var formData = readFromData();
+			insertNewRecord(formData);
+			reset();
 		}
+		
+		
 		
     });
 })
