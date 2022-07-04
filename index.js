@@ -1,18 +1,21 @@
-function User(username, firstName, lastName) {
+/*function User(username, firstName, lastName) {
     this.id = Math.floor(Math.random() * 100);
     this.userName = userName;
     this.firstName = firstName;
     this.lastName = lastName;
 }
+*/
 
+//grabbing the filled out inputs
 function readFromData(){
-	var fromData = {};
+	var fromData = {}; //declaring an object
 	fromData["ID"] = Math.floor(Math.random() * 100);
 	fromData["uName"] = document.getElementById("userName").value;
 	fromData["fName"] = document.getElementById("firstName").value;
 	fromData["lName"] = document.getElementById("lastName").value;
 	return fromData;	
 }
+
 
 function insertNewRecord(data){
 	var table = document.getElementById("accountList").getElementsByTagName('tbody')[0];
@@ -26,7 +29,7 @@ function insertNewRecord(data){
 	cell3 = newRow.insertCell(3);
 	cell3.innerHTML = data.lName;
 	cell4 = newRow.insertCell(4);
-	cell4.innerHTML = '<a>Delete</a>';
+	cell4.innerHTML = '<button onclick="onDelete(this)">Delete</button>';
 }
 
 function reset(){
@@ -35,10 +38,10 @@ function reset(){
 	document.getElementById("lastName").value = "";
 }
 
-function delete(td){
-	
+function onDelete(td){
+	row = td.parentElement.parentElement; // 
+	document.getElementById("accountList").deleteRow(row.rowIndex);
 }
-
 
 
 window.addEventListener("load", function () {
