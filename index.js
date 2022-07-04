@@ -39,8 +39,10 @@ function reset(){
 }
 
 function onDelete(td){
+	if(confirm("Are you sure")){
 	row = td.parentElement.parentElement; // 
 	document.getElementById("accountList").deleteRow(row.rowIndex);
+	}
 }
 
 
