@@ -23,3 +23,14 @@ h2 {
     border-radius: 8px;
     border: 1px solid #000000
 }
+
+table {
+	width: 480px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #000000
+}
+
+tbody{
+	padding: 5px;
+}

@@ -10,11 +10,12 @@
 </head>
 <body>
     <div class="main-area">
-        <div class="entry-area">
+        
+		<div class="entry-area">
             <h2>Create User</h2>
             <div class="entry-wrapper">
-                <label class="entry-label" for="username">Username:</label>
-                <input id="username" class="entry" type="text"/>
+                <label class="entry-label" for="userName">Username:</label>
+                <input id="userName" class="entry" type="text"/>
             </div>
             <div class="entry-wrapper">
                 <label class="entry-label" for="firstName">First Name:</label>
@@ -25,10 +26,30 @@
                 <input id="lastName" class="entry" type="text"/>
             </div>
             <div class="entry-wrapper">
-                <button id="submit">Submit</button>
+                <button id="submit">Create</button>
+            </div>
+			<div class="entry-wrapper">
+                <label id="error"></label>
             </div>
         </div>
-        <div class="existing-users-area"></div>
-    </div>
+        
+		
+		<div class="existing-users-area">
+			<table class="list" id="userList">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Username</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody align=center>
+                </tbody>
+			</table>
+		</div>
+    
+	</div>
 </body>
 </html>
